@@ -1,7 +1,7 @@
 import { react } from "react";
 
-function AllMeetups() {
+function Favorites() {
     return <div></div>;
 }
 
-export default AllMeetups;
+export default Favorites;
