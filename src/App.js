@@ -1,16 +1,25 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Todo from "./components/Todo";
-import Modal from "./components/Modal";
-import BackDrop from "./components/BackDrop";
+import { Route, Routes } from "react-router-dom";
+import AllMeetups from "./pages/AllMeetups";
+import Favourites from "./pages/Favourites";
+import NewMeetups from "./pages/NewMeetups";
+import MainNavigation from "./components/layout/MainNavigation";
 
 function App() {
     return (
         <div>
-            <h1>My Todos</h1>
-            <Todo text="Thing 1" />
-            <Todo text="Thing 2" />
-            <Todo text="Thing 3" />
+            <MainNavigation />
+            <Route path="/">
+                <AllMeetups />
+            </Route>
+            <Route path="/new-meetup">
+                <NewMeetups />
+            </Route>
+            <Route path="/favourites">
+                <Favourites />
+            </Route>
         </div>
     );
 }
