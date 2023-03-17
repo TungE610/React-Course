@@ -1,5 +1,5 @@
 import { react } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./MainNavigation.module.css";
 
 function MainNavigation() {
@@ -9,13 +9,13 @@ function MainNavigation() {
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">All Meetup</Link>
+                        <NavLink to="/">All Meetups</NavLink>
                     </li>
                     <li>
-                        <Link to="/new-meetup">Add New Meetup</Link>
-                    </li>{" "}
+                        <NavLink to="/new-meetup">Add New Meetup</NavLink>
+                    </li>
                     <li>
-                        <Link to="/favourites">My Favourites</Link>
+                        <NavLink to="/favourites">My Favourites</NavLink>
                     </li>
                 </ul>
             </nav>

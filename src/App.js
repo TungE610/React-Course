@@ -5,22 +5,17 @@ import { Route, Routes } from "react-router-dom";
 import AllMeetups from "./pages/AllMeetups";
 import Favourites from "./pages/Favourites";
 import NewMeetups from "./pages/NewMeetups";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
     return (
-        <div>
-            <MainNavigation />
-            <Route path="/">
-                <AllMeetups />
-            </Route>
-            <Route path="/new-meetup">
-                <NewMeetups />
-            </Route>
-            <Route path="/favourites">
-                <Favourites />
-            </Route>
-        </div>
+        <Layout>
+            <Routes>
+                <Route path="/" element={<AllMeetups />} />
+                <Route path="/new-meetup" element={<NewMeetups />} />
+                <Route path="/favourites" element={<Favourites />} />
+            </Routes>
+        </Layout>
     );
 }
 
